@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-export const NoteContext = createContext();
+export const NotesContext = createContext();
 export const NotesProvider = ({ children }) =>{
     const [notes, setNotes] = useState(()=>{
         const savedNotes = localStorage.getItem("notes");
@@ -19,8 +19,8 @@ export const NotesProvider = ({ children }) =>{
         setNotes([...notes, newNote]);
     };
     return(
-        <NoteContext.Provider value={{notes, addNote, selectedNote, setSelectedNote}}>
+        <NotesContext.Provider value={{notes, addNote, selectedNote, setSelectedNote}}>
             {children}
-        </NoteContext.Provider>
+        </NotesContext.Provider>
     );
 };

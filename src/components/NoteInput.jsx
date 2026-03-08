@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect, useContext } from "react";
-import { NoteContext } from "../context/NotesContext";
+import { NotesContext } from "../context/NotesContext";
 
 const NoteInput =()=>{
     const [input, setInput] = useState("");
     const inputRef = useRef(null);
-    const { addNote } = useContext(NoteContext);
+    const { addNote } = useContext(NotesContext);
 
     useEffect(()=>{
         inputRef.current.focus();

@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { NoteContext } from "../context/NotesContext";
+import { NotesContext } from "../context/NotesContext";
 
 const NoteList = ()=>{
-    const { notes, selectedNote, setSelectedNote } = useContext(NoteContext);
+    const { notes, selectedNote, setSelectedNote } = useContext(NotesContext);
 
     return(
         <ul>
