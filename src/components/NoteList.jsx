@@ -7,13 +7,7 @@ const NoteList = ()=>{
     return(
         <ul>
             {notes.map((note)=>(
-                <li key={note.id} onClick={()=>setSelectedNote(note.id)}
-                style={{cursor: "pointer",
-                        padding: "8px",
-                        backgroundColor: selectedNote === note.id ? "yellow" : "white",
-                        border: "1px solid gray",
-                        marginTop: "5px"
-                }}>
+                <li key={note.id} className={selectedNote === note.id ? "selected" : ""} onClick={()=>setSelectedNote(note.id)}>
                     {note.text}
                 </li>
             ))}
